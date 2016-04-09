@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Week2-test1 by kumarakrishna</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Week2-test1</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/kumarakrishna/week2-test1/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/kumarakrishna/week2-test1/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/kumarakrishna/week2-test1" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd%22%3E">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</a>
+
+</p>
+  
+  
+  
+  
+  code{white-space: pre;}
+  
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code &amp;gt; span.kw { color: #007020; font-weight: bold; }
+code &amp;gt; span.dt { color: #902000; }
+code &amp;gt; span.dv { color: #40a070; }
+code &amp;gt; span.bn { color: #40a070; }
+code &amp;gt; span.fl { color: #40a070; }
+code &amp;gt; span.ch { color: #4070a0; }
+code &amp;gt; span.st { color: #4070a0; }
+code &amp;gt; span.co { color: #60a0b0; font-style: italic; }
+code &amp;gt; span.ot { color: #007020; }
+code &amp;gt; span.al { color: #ff0000; font-weight: bold; }
+code &amp;gt; span.fu { color: #06287e; }
+code &amp;gt; span.er { color: #ff0000; font-weight: bold; }
+  
+
+
+
+<h2 id="formative-assignment-for-module-2-lesson-1-case-statement">
+<a id="formative-assignment-for-module-2-lesson-1-case-statement" class="anchor" href="#formative-assignment-for-module-2-lesson-1-case-statement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Formative Assignment for Module #2, Lesson #1: Case Statement</h2>
+
+<p>The overall goal of this assignment is to implement a program control mechanism using Ruby that</p>
+
+<ul>
+<li>properly tests for object equality</li>
+<li>properly tests for a <code>nil</code> value</li>
+<li>properly tests for a boolean <code>true</code>/<code>false</code> value</li>
+<li>implements these tests using a <code>case</code> statement</li>
+</ul>
+
+<p>The functional goal of the assignment is to rewrite a provided if/else statement using a case statement.</p>
+
+<h3 id="functional-requirements">
+<a id="functional-requirements" class="anchor" href="#functional-requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functional Requirements</h3>
+
+<ol>
+<li>
+<p>Re-write the following if/else statement using a <code>case</code> statement in Ruby.</p>
+<div><pre><code>some_var = "false"
+another_var = "nil"
+
+if some_var == "pink elephant"
+  puts "Don't think about the pink elephant!"
+
+elsif another_var.nil?
+  puts "Question mark in the method name?"
+
+elsif some_var == false
+  puts "Looks like this one should execute"
+
+else
+  puts "I guess nothing matched... But why?"
+end</code></pre></div>
+</li>
+<li>
+<p>Analyze the outcome of the original script and state the reasons why each of the first three (3) tests fail and how they could be made to succeed.</p>
+<pre><code>$ ruby module2_lesson1_formative.rb
+
+I guess nothing matched... But why?</code></pre>
+<p>Change the source code of the solution to verify your conclusions.</p>
+</li>
+</ol>
+
+<h3 id="getting-started">
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h3>
+
+<ol>
+<li>
+<p>Download and extract the starter set of files. The root directory of the student-start will be referred to as the root directory of your solution.</p>
+<pre><code>--- student-start
+   |-- .rspec(important hidden file)
+   |-- module2_lesson1_formative.rb
+   `-- spec
+       |-- lesson1_spec.rb
+       `-- spec_helper.rb</code></pre>
+<ul>
+<li>.rspec - configuration file for unit tests. If you move your files you must take care to also copy this file.</li>
+<li>module2_lesson1_formative.rb - contains the starting if/else statements. Your solution must be placed within this file.</li>
+<li>spec - this directory contains tests to verify your solution. You should not modify anything in this directory</li>
+</ul>
+</li>
+<li>
+<p>Install the following gems used by the rspec unit tests. You may have some of these already installed.</p>
+<pre><code>$ gem install rspec
+$ gem install rspec-its</code></pre>
+</li>
+<li>
+<p>Run the provided Ruby script containing the if/else</p>
+<pre><code>$ ruby module2_lesson1_formative.rb
+
+I guess nothing matched... But why?</code></pre>
+</li>
+<li>
+<p>Run the rspec command to execute the unit tests within the spec directory. This command should be run from the root directory of the project. This should result in several failures until you complete your solution.</p>
+<pre><code>$ rspec
+
+.FFFF
+
+Failures:
+...
+Finished in 0.02247 seconds (files took 0.1567 seconds to load)
+5 examples, 4 failures
+
+Failed examples:
+
+rspec ./spec/case_spec.rb:17 # lesson1 check implementation remove if clause
+rspec ./spec/case_spec.rb:21 # lesson1 check implementation remove elsif clause
+rspec ./spec/case_spec.rb:25 # lesson1 check implementation remove elsif clause
+rspec ./spec/case_spec.rb:29 # lesson1 check implementation missing case</code></pre>
+</li>
+<li><p>Implement the solution and re-test.</p></li>
+</ol>
+
+<h3 id="technical-requirements">
+<a id="technical-requirements" class="anchor" href="#technical-requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Requirements</h3>
+
+<ol>
+<li><p>Implement all parts of this assignment within the module2_lesson1_formative.rb file in the root directory of your solution. The grader will load this specific file from this location.</p></li>
+<li><p>Remove all traces of <code>if</code>, <code>elsif</code>.</p></li>
+<li><p>Re-implement the solution in terms of <code>case</code> and associated constructs.</p></li>
+<li><p>Return the same result as the initial solution after applying the case statement.</p></li>
+</ol>
+
+<h3 id="self-gradingfeedback">
+<a id="self-gradingfeedback" class="anchor" href="#self-gradingfeedback" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Self Grading/Feedback</h3>
+
+<p>Unit tests have been provided in the bootstrap files that can be used to evaluate your solution. They must be run from the same directory as your solution.</p>
+
+<pre><code>$ rspec
+
+Finished in 0.00304 seconds (files took 0.16353 seconds to load)
+5 examples, 0 failures</code></pre>
+
+<h3 id="submission">
+<a id="submission" class="anchor" href="#submission" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Submission</h3>
+
+<p>There is no submission required for this assignment but the skills learned will be part of a follow-on assignment so please complete this to the requirements of the unit test.</p>
+
+<p>
+
+Status API Training Shop Blog About</p>
+        </section>
+
+        <footer>
+          Week2-test1 is maintained by <a href="https://github.com/kumarakrishna">kumarakrishna</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
